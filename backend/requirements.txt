@@ -1,0 +1,20 @@
+# Inventix AI Backend Dependencies
+# =================================
+
+# Core Framework
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Google Gemini
+google-generativeai
+
+# Data Validation
+pydantic
+pydantic-settings
+
+# HTTP Client
+httpx
+
+# Utilities
+python-multipart
