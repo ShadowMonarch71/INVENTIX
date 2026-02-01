@@ -21,3 +21,8 @@ python-multipart
 
 # PDF Processing
 pymupdf
+
+# Authentication
+python-jose[cryptography]
+passlib[bcrypt]
+

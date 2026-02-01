@@ -1,0 +1,33 @@
+{
+  "50868e05-8b8c-423b-8e5d-df210210f7b7": {
+    "title": "AI-Based Medical Diagnosis",
+    "description": "A novel AI system that combines deep learning with multi-modal medical imaging (CT, MRI, and PET scans) to detect early-stage cancers with improved accuracy. The system uses a proprietary feature fusion architecture that processes different imaging modalities simultaneously, correlating subtle patterns that human radiologists might miss. Key innovations include:\n1. Cross-modal attention mechanism for feature alignment\n2. Uncertainty quantification for diagnostic confidence\n3. Explainable AI visualization for clinical interpretation",
+    "project_type": "patent",
+    "id": "50868e05-8b8c-423b-8e5d-df210210f7b7",
+    "user_id": "dd016959-5285-4564-b999-dec544609fea",
+    "created_at": "2026-02-01 00:44:07.985425",
+    "updated_at": "2026-02-01T00:45:22.910706",
+    "last_analyzed": "2026-02-01T00:45:22.910690",
+    "document_text": "--- Page 1 ---\nMulti-Modal AI System for Early Cancer Detection\nAbstract\nThis document presents a novel artificial intelligence system designed to detect early-stage cancers\nby jointly analyzing multi-modal medical imaging data, including CT, MRI, and PET scans. The\nsystem leverages deep learning with a proprietary feature fusion architecture to correlate subtle\ncross-modal patterns that may be overlooked in single-modality analysis.\nSystem Overview\nThe proposed system ingests synchronized CT, MRI, and PET imaging data and processes them\nthrough modality-specific encoders. A cross-modal attention layer aligns semantic features across\nmodalities, allowing the model to learn interdependencies between anatomical structure, metabolic\nactivity, and tissue contrast.\nKey Innovations\n\u2022\nCross-modal attention mechanism enabling dynamic feature alignment across CT, MRI, and\nPET modalities.\n\u2022\nUncertainty quantification layer that outputs confidence estimates for each diagnostic\nprediction.\n\u2022\nExplainable AI visualization module that highlights contributing regions in each imaging\nmodality for clinical interpretation.\nClinical Impact\nBy integrating complementary imaging modalities and providing interpretable outputs with\nconfidence measures, the system aims to support radiologists in identifying early-stage\nmalignancies with improved sensitivity and reduced false positives. This approach positions the\nsystem as a decision-support tool rather than a standalone diagnostic authority.\nDisclaimer\nThis document is provided for research and testing purposes only. The described system does not\nconstitute medical advice or a clinically validated diagnostic tool.",
+    "analysis": {
+      "novelty_score": 0.27,
+      "novelty_status": "red",
+      "key_concepts": [
+        "Multi-Modal AI System",
+        "Cross-modal attention mechanism",
+        "Uncertainty quantification layer",
+        "Explainable AI visualization",
+        "Deep learning feature fusion"
+      ],
+      "potential_overlaps": [
+        "Prior art utilizing deep learning for multi-modal medical image fusion (CT/PET/MRI)",
+        "Existing patents covering attention mechanisms for feature alignment in computer vision",
+        "Methodologies for generating confidence estimates (uncertainty quantification) in neural networks",
+        "General decision-support systems for radiological interpretation"
+      ],
+      "confidence": "medium"
+    },
+    "pipeline_stage": "complete",
+    "progress": 100.0
+  }
+}

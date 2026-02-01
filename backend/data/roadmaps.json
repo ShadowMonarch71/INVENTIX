@@ -1,0 +1,114 @@
+{
+  "50868e05-8b8c-423b-8e5d-df210210f7b7": {
+    "project_id": "50868e05-8b8c-423b-8e5d-df210210f7b7",
+    "phases": [
+      {
+        "id": "197f71d9-46a4-4b5f-aa4f-7daf761f00cf",
+        "name": "Discovery",
+        "description": "Initial research and prior art analysis",
+        "milestones": [
+          {
+            "id": "2b80a87d-bb31-4105-bd49-fa91a14bc67e",
+            "title": "Define core invention",
+            "description": "Clearly articulate the novel aspects",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:28.430811",
+            "order": 0
+          },
+          {
+            "id": "31ec002e-747a-46fd-b463-8351efd24b1a",
+            "title": "Prior art search",
+            "description": "Conduct comprehensive prior art analysis",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:32.582746",
+            "order": 1
+          },
+          {
+            "id": "ba56524a-da01-4591-b379-f620ce1df490",
+            "title": "Novelty assessment",
+            "description": "Evaluate novelty indicators",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:35.650195",
+            "order": 2
+          }
+        ],
+        "color": "#6366f1"
+      },
+      {
+        "id": "21362adf-81ec-4c24-afef-b67b183d4950",
+        "name": "Documentation",
+        "description": "Prepare patent application materials",
+        "milestones": [
+          {
+            "id": "1cba83d1-368b-482a-8a6d-a082eb21b826",
+            "title": "Draft claims",
+            "description": "Write patent claims",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:46.000172",
+            "order": 0
+          },
+          {
+            "id": "e055b9c5-ae0e-4c5b-88b1-14aed17117c4",
+            "title": "Technical drawings",
+            "description": "Prepare technical illustrations",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:47.713516",
+            "order": 1
+          },
+          {
+            "id": "f974a6ee-3369-462a-bc3f-fc635ec2ef93",
+            "title": "Description write-up",
+            "description": "Complete detailed description",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:54.996637",
+            "order": 2
+          }
+        ],
+        "color": "#8b5cf6"
+      },
+      {
+        "id": "450f16f4-7039-48c3-86a3-c17c42b6c54a",
+        "name": "Filing",
+        "description": "Submit and track application",
+        "milestones": [
+          {
+            "id": "563b6e9a-e2c3-4d3e-858f-e08626b244e9",
+            "title": "Legal review",
+            "description": "Attorney review and feedback",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:57.265889",
+            "order": 0
+          },
+          {
+            "id": "d5199124-c380-4a2f-8ab8-0ef746eccfd4",
+            "title": "File application",
+            "description": "Submit to patent office",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:44:58.515272",
+            "order": 1
+          },
+          {
+            "id": "af30a7a5-3335-44c6-b2db-a49c77d77113",
+            "title": "Track prosecution",
+            "description": "Monitor and respond to office actions",
+            "target_date": null,
+            "completed": true,
+            "completed_at": "2026-02-01T00:45:00.099198",
+            "order": 2
+          }
+        ],
+        "color": "#a855f7"
+      }
+    ],
+    "created_at": "2026-02-01 00:44:07.986337",
+    "updated_at": "2026-02-01T00:45:00.099204"
+  }
+}
