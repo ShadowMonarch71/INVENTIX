@@ -75,59 +75,81 @@ class SLMEngine:
         Generate a response from the SLM.
         
         Returns structured SLMResponse with success/failure status.
+        Includes retry logic for rate limiting (429) errors.
         """
-        try:
-            # Build the full prompt
-            full_prompt = ""
-            if request.system_prompt:
-                full_prompt = f"{request.system_prompt}\n\n---\n\n"
-            full_prompt += request.prompt
-            
-            # Generate response
-            response = self.model.generate_content(full_prompt)
-            
-            # Extract text
-            raw_text = response.text.strip()
-            
-            # Parse JSON if required
-            parsed_json = None
-            if request.response_format == "json":
-                try:
-                    # Handle markdown code blocks
-                    if raw_text.startswith("```json"):
-                        raw_text = raw_text[7:]
-                    if raw_text.startswith("```"):
-                        raw_text = raw_text[3:]
-                    if raw_text.endswith("```"):
-                        raw_text = raw_text[:-3]
-                    raw_text = raw_text.strip()
+        import asyncio
+        
+        max_retries = 3
+        retry_delay = 2  # seconds
+        
+        for attempt in range(max_retries):
+            try:
+                # Build the full prompt
+                full_prompt = ""
+                if request.system_prompt:
+                    full_prompt = f"{request.system_prompt}\n\n---\n\n"
+                full_prompt += request.prompt
+                
+                # Generate response
+                response = self.model.generate_content(full_prompt)
+                
+                # Extract text
+                raw_text = response.text.strip()
+                
+                # Parse JSON if required
+                parsed_json = None
+                if request.response_format == "json":
+                    try:
+                        # Handle markdown code blocks
+                        if raw_text.startswith("```json"):
+                            raw_text = raw_text[7:]
+                        if raw_text.startswith("```"):
+                            raw_text = raw_text[3:]
+                        if raw_text.endswith("```"):
+                            raw_text = raw_text[:-3]
+                        raw_text = raw_text.strip()
+                        
+                        parsed_json = json.loads(raw_text)
+                    except json.JSONDecodeError as e:
+                        return SLMResponse(
+                            success=False,
+                            raw_text=raw_text,
+                            parsed_json=None,
+                            error=f"JSON parsing failed: {str(e)}",
+                            model_used=settings.gemini_model
+                        )
+                
+                return SLMResponse(
+                    success=True,
+                    raw_text=raw_text,
+                    parsed_json=parsed_json,
+                    error=None,
+                    model_used=settings.gemini_model
+                )
+                
+            except Exception as e:
+                error_str = str(e)
+                # Check if it's a rate limit error (429)
+                if "429" in error_str and attempt < max_retries - 1:
+                    # Wait and retry with exponential backoff
+                    await asyncio.sleep(retry_delay * (2 ** attempt))
+                    continue
                     
-                    parsed_json = json.loads(raw_text)
-                except json.JSONDecodeError as e:
-                    return SLMResponse(
-                        success=False,
-                        raw_text=raw_text,
-                        parsed_json=None,
-                        error=f"JSON parsing failed: {str(e)}",
-                        model_used=settings.gemini_model
-                    )
-            
-            return SLMResponse(
-                success=True,
-                raw_text=raw_text,
-                parsed_json=parsed_json,
-                error=None,
-                model_used=settings.gemini_model
-            )
-            
-        except Exception as e:
-            return SLMResponse(
-                success=False,
-                raw_text="",
-                parsed_json=None,
-                error=str(e),
-                model_used=settings.gemini_model
-            )
+                return SLMResponse(
+                    success=False,
+                    raw_text="",
+                    parsed_json=None,
+                    error=error_str,
+                    model_used=settings.gemini_model
+                )
+        
+        return SLMResponse(
+            success=False,
+            raw_text="",
+            parsed_json=None,
+            error="Max retries exceeded for rate limiting",
+            model_used=settings.gemini_model
+        )
     
     async def generate_with_evidence(
         self,

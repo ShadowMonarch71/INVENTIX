@@ -19,7 +19,11 @@ httpx
 # Utilities
 python-multipart
 
-# PDF Processing
+# Document Processing
+pypdf
+python-docx
+
+# Legacy PDF Processing (fallback)
 pymupdf
 
 # Authentication

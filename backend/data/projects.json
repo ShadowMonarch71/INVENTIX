@@ -29,5 +29,41 @@
     },
     "pipeline_stage": "complete",
     "progress": 100.0
+  },
+  "80d33850-9c90-42e6-89be-1f086bd4aa77": {
+    "title": "AI-Driven Optimization of Smart Grids for Renewable Energy Integration",
+    "description": "The rapid integration of renewable energy sources such as solar and wind has introduced significant variability and uncertainty into modern power grids. Traditional grid control mechanisms often struggle to adapt to these fluctuations, leading to inefficiencies, energy imbalance, and increased operational costs.\n\nThis research project proposes an AI-driven smart grid optimization framework that leverages machine learning\u2013based demand forecasting and reinforcement learning\u2013based control strategies to improve grid stability and energy distribution efficiency. By analyzing historical consumption patterns, weather forecasts, and real-time sensor data, the system dynamically adjusts energy dispatch across distributed energy resources.\n\nThe framework also incorporates uncertainty estimation to quantify confidence in predictions and an explainability module to visualize decision-making factors for grid operators. The goal is to support informed, real-time decision-making while enhancing resilience, reducing transmission losses, and enabling more reliable integration of renewable energy sources into smart grids.",
+    "project_type": "research",
+    "id": "80d33850-9c90-42e6-89be-1f086bd4aa77",
+    "user_id": "dd016959-5285-4564-b999-dec544609fea",
+    "created_at": "2026-02-01 01:14:46.017187",
+    "updated_at": "2026-02-01T01:15:03.038534",
+    "last_analyzed": "2026-02-01T01:15:03.038522",
+    "document_text": "--- Page 1 ---\nAI-Driven Smart Grid Optimization for Renewable\nEnergy Management\nAbstract\nThe increasing penetration of renewable energy sources introduces significant variability and\nuncertainty into modern power grids. This document presents an artificial intelligence\u2013based\nframework for optimizing energy distribution in smart grids by forecasting demand, balancing\nrenewable generation, and reducing transmission losses.\nBackground and Motivation\nTraditional grid management systems rely on static control strategies that struggle to adapt to\nfluctuating renewable energy inputs such as solar and wind power. Recent advances in machine\nlearning enable dynamic forecasting and real-time decision-making, offering opportunities to\nimprove grid stability and efficiency.\nProposed System Architecture\nThe proposed system integrates time-series forecasting models with reinforcement learning\u2013based\ncontrol agents. Historical consumption data, weather forecasts, and real-time sensor inputs are\nprocessed to generate optimal dispatch strategies across distributed energy resources.\nKey Technical Contributions\n\u2022\nA hybrid forecasting model combining deep neural networks with probabilistic uncertainty\nestimation.\n\u2022\nA reinforcement learning controller that dynamically adjusts energy distribution to minimize\nimbalance and losses.\n\u2022\nAn explainability module that visualizes control decisions and highlights key contributing factors\nfor grid operators.\nIntended Use and Limitations\nThe system is intended as a decision-support tool for grid operators managing renewable-heavy\npower systems. It does not autonomously control critical infrastructure without human oversight.\nPerformance may vary depending on data quality and regional grid characteristics.\nConclusion\nBy leveraging predictive analytics and adaptive control, the proposed AI framework aims to\nenhance the resilience and efficiency of smart grids while supporting the integration of renewable\nenergy sources.\nDisclaimer\n\n\n--- Page 2 ---\nThis document is provided for research and testing purposes only. It does not constitute operational\nor regulatory guidance for power grid management.",
+    "analysis": {
+      "novelty_score": 0.5,
+      "novelty_status": "yellow",
+      "confidence_score": 50,
+      "confidence": "low",
+      "risk_level": "medium",
+      "risk_factors": [
+        "Unable to complete full analysis"
+      ],
+      "risk_summary": "Analysis could not be completed fully. Please try again.",
+      "key_concepts": [],
+      "potential_overlaps": [],
+      "novel_claims": [],
+      "prior_art_matches": [],
+      "recommendations": [
+        {
+          "title": "Retry Analysis",
+          "description": "Please try running the analysis again",
+          "priority": "high"
+        }
+      ],
+      "summary": "The analysis could not be completed. Please ensure your description is detailed enough and try again."
+    },
+    "pipeline_stage": "complete",
+    "progress": 100.0
   }
 }
